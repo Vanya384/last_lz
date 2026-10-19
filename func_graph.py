@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt #импортируем модуль pyplot из
 import numpy as np #имопртируем библиотеку numpy для быстрой работы с математическими функциями
 
 def graphic(min_x,max_x):
+    if min_x>max_x:
+        print("Ошибка,min<max")
+        return -1
     if min_x + max_x == 0:
         print("Ошибка,min не должен быть отрицательной версией max")  #так как в следующей строке у нас кол-во точек напрямую зависит от min_x+max_x
         return -1
